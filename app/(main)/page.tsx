@@ -1,7 +1,8 @@
+import { getCurrentUser } from "@/lib/auth";
 import Link from "next/link";
 
 const Home = async() =>{
-  const user = false;
+  const user = await getCurrentUser();
   return (
     <div className="max-w-4xl mx-auto">
       <h1 className="text-3xl font-bold mb-6 text-white">
@@ -49,8 +50,8 @@ const Home = async() =>{
       {user ? (
         <div className="bg-green-900/30 border border-green-600 rounded-lg p-4">
           <p className="text-green-300">
-            Welcome back, <strong>{user}</strong>! You are logged in as{" "}
-            <strong className="text-green-200">{user}</strong>.
+            Welcome back, <strong>{user.name}</strong>! You are logged in as{" "}
+            <strong className="text-green-200">{user.role}</strong>.
           </p>
           <Link
             href="/dashboard"
