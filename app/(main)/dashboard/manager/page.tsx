@@ -1,6 +1,6 @@
 import ManagerDashboard from "@/components/dashboard/ManagerDashboard";
 import { checkUserPermission, getCurrentUser } from "@/lib/auth";
-import prisma from "@/lib/db";
+import { prisma } from "@/lib/db";
 import { transformTeams, transformUsers } from "@/lib/utils";
 import { Role, User } from "@/types";
 import { redirect } from "next/navigation";

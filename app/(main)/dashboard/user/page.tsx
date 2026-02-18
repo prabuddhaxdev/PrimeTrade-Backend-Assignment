@@ -1,6 +1,6 @@
 import UserDashboard from "@/components/dashboard/UserDashboard";
 import { getCurrentUser } from "@/lib/auth";
-import prisma from "@/lib/db";
+import {prisma} from "@/lib/db";
 import { User } from "@/types";
 import { redirect } from "next/navigation";
 

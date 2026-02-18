@@ -1,7 +1,7 @@
 
 import AdminDashboard from "@/components/dashboard/AdminDashboard";
 import { checkUserPermission, getCurrentUser } from "@/lib/auth";
-import prisma from "@/lib/db";
+import { prisma } from "@/lib/db";
 import { transformTeams, transformUsers } from "@/lib/utils";
 import { Role } from "@/types";
 import { redirect } from "next/navigation";
